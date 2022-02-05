@@ -1,0 +1,5 @@
+*__pycache__*
+venv
+
+#xcode-select: error: invalid developer directory '/Library/Developer/CommandLineTools'
+#Failed during: /usr/bin/sudo /usr/bin/xcode-select --switch /Library/Developer/CommandLineTools
