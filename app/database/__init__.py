@@ -1,4 +1,4 @@
-from flask import get_flashed_messages
+from flask import g
 
 import sqlite3
 

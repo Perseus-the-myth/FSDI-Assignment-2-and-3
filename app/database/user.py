@@ -6,8 +6,8 @@ def output_formatter(results):
         res_dict = {}
         res_dict["id"] = result[0]
         res_dict["first_name"] = result[1]
-        res-dict["last-name"] = result[2]
-        res-dict["hobbies"] = result[3]
+        res_dict["last_name"] = result[2]
+        res_dict["hobbies"] = result[3]
         res_dict["active"] = result[4]
         out.append(res_dict)
     return out
@@ -30,7 +30,7 @@ def insert(first_name, last_name, hobbies=None, active=1):
     return last_row_id
 
 def scan():
-    cursor + get_db().execute(
+    cursor = get_db().execute(
         "SELECT * FROM user WHERE active=1", ()
     )
     results = cursor.fetchall()
@@ -42,11 +42,11 @@ def read(pk):
         "SELECT * FROM user WHERE id=?", (pk, )
     )
     results = cursor.fetchall()
-    cursor.close(
+    cursor.close()
     return output_formatter(results)
-    )
+    
 
-def update(pk, first_name, last_name, hobbies, pk)
+def update(pk, first_name, last_name, hobbies ):
     value_tuple = (first_name, last_name, hobbies, pk)
     query = """
         UPDATE user
