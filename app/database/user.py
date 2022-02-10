@@ -68,5 +68,12 @@ def deactivate_user(pk):
     cursor.commit()
     cursor.close()
 
+def reactivate_user(pk):
+    cursor = get_db()
+    cursor.execute(
+        "UPDATE user SET active=1 WHERE id=?", (pk, )
+    )
+    cursor.commit()
+    cursor.close()
 
 
